@@ -12,7 +12,7 @@ createDiv.classList = 'keyboard'
 let createRow = document.createElement('div')
 createRow.classList = 'row'
 let textCursor = 0
-let isActive = {
+var isActive = {                             // eslint test =)
     shift: false,
     capsLock: false,
     ctrl: false,
