@@ -1,6 +1,5 @@
 import {keyButtons} from './assets/jsons/keys.js';
 
-
 if (!sessionStorage.getItem('language')) sessionStorage.setItem('language', 'En');
 
 let textArea = document.createElement('textarea');

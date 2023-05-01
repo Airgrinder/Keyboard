@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "eslint": "eslint script.js",
-    "eslint:fix": "eslint script.js --fix"
+    "eslint": "node_modules/.bin/eslint script.js",
+    "eslint:fix": "node_modules/.bin/eslint script.js --fix"
   },
   "devDependencies": {
     "eslint": "^8.39.0"
