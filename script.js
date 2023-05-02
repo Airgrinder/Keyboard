@@ -4,7 +4,7 @@ if (!sessionStorage.getItem('language')) sessionStorage.setItem('language', 'En'
 
 let textArea = document.createElement('textarea');
 textArea.classList = 'textarea';
-textArea.placeholder = 'switch language Shift+Alt';
+textArea.placeholder = 'Switch language Shift+Alt';
 textArea.contentEditable = 'false';
 textArea.autoFocus = 'true';
 let createDiv = document.createElement('div');
@@ -36,13 +36,13 @@ document.onkeydown = function (e) {
 		textArea.value = textArea.value.substring(0, textCursor) + textArea.value.substring(textCursor + 1, textArea.value.length);
 		if (textCursor === 0) return;
 	} else if (e.key === 'Enter') {
-		textArea.value += '\n';
+		textArea.value = textArea.value.substring(0, textCursor) + '\n' + textArea.value.substring(textCursor, textArea.value.length);
 		textCursor++;
 	} else if (e.key === 'Space') {
-		textArea.value += ' ';
+		textArea.value = textArea.value.substring(0, textCursor) + ' ' + textArea.value.substring(textCursor, textArea.value.length);
 		textCursor++;
 	} else if (e.key === 'Tab') {
-		textArea.value += '\t';
+		textArea.value = textArea.value.substring(0, textCursor) + '\t' + textArea.value.substring(textCursor, textArea.value.length);
 		textCursor++;
 	} else if (e.key === 'Shift') {
 		isActive.shift = !isActive.shift;
@@ -133,13 +133,13 @@ function functionalButtons(e) {
 		textArea.value = textArea.value.substring(0, textCursor) + textArea.value.substring(textCursor + 1, textArea.value.length);
 		if (textCursor === 0) return;
 	} else if (e.target.id === 'Enter') {
-		textArea.value += '\n';
+		textArea.value = textArea.value.substring(0, textCursor) + '\n' + textArea.value.substring(textCursor, textArea.value.length);
 		textCursor++;
 	} else if (e.target.id === 'Space') {
-		textArea.value += ' ';
+		textArea.value = textArea.value.substring(0, textCursor) + ' ' + textArea.value.substring(textCursor, textArea.value.length);
 		textCursor++;
 	} else if (e.target.id === 'Tab') {
-		textArea.value += '\t';
+		textArea.value = textArea.value.substring(0, textCursor) + '\t' + textArea.value.substring(textCursor, textArea.value.length);
 		textCursor++;
 	} else if (e.target.innerText === 'Shift') {
 		isActive.shift = !isActive.shift;
