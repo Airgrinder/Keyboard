@@ -4,6 +4,7 @@ if (!sessionStorage.getItem('language')) sessionStorage.setItem('language', 'En'
 
 let textArea = document.createElement('textarea');
 textArea.classList = 'textarea';
+textArea.placeholder = 'switch language Shift+Alt';
 textArea.contentEditable = 'false';
 textArea.autoFocus = 'true';
 let createDiv = document.createElement('div');
